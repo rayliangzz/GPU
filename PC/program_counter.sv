@@ -8,8 +8,8 @@ module program_counter (
     input logic             reset,
 
     // If the ALU passed in 
-    input logic             branch_taken
-    input logic [31:0]      branch_data
+    input logic             branch_taken,
+    input logic [31:0]      branch_data,
 
     output logic [31:0]     pc
 );
@@ -24,7 +24,7 @@ module program_counter (
                 pc <= pc;
             else
                 if (branch_taken)
-                    pc <= branch_data
+                    pc <= branch_data;
                 else 
                     pc <= pc + 32'd4;
         end
