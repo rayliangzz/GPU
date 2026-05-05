@@ -32,6 +32,8 @@ module regfile (
         else if (write_enable) begin
             // Store the write_data into the selected register
             register_storage[write_address] <= write_data;
+        end else begin
+            register_storage <= register_storage;
         end
     end
 
