@@ -5,7 +5,7 @@ module mux16to1 (
     output logic        out    
 );
     
-    // The index 'sel' automatically selects the correct bit from 'in'
+    // The index 'sel' selects the correct bit to output based on the input 'in'
     assign out = in[sel];
 
 endmodule
